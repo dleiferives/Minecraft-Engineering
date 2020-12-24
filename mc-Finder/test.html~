@@ -1,0 +1,1 @@
+<!DOCTYPE html><html><body><script>var request = new Request({url: 'http://myapi.com/orders',method: 'GET'});fetch(request);window.alert(request);</script><body><html>
