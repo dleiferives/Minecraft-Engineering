@@ -5,20 +5,25 @@
 
 int main()
 {
+	std::fstream myfile;
+	myfile.open("4-letter.txt");
+
+
+
 	std::vector<char> chars = { 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
         printf("%i",chars.size());
 	
 	// first set
 	for( auto i : chars)
 	{
-		printf("   %c\n", i);
+		myfile << " " << " " << " " << i << "\n";
 	}
 	// second set
 	for( auto i : chars)
 	{
 		for(auto j : chars)
 		{
-			printf("  %c%c\n", i,j);
+			myfile << " " << " " << i << j << "\n";	
 		}
 	}
 	
@@ -30,7 +35,7 @@ int main()
 			
 			for(auto k : chars)
 			{
-				printf(" %c%c%c\n", i,j,k);
+				myfile << " " << i << j << k << "\n";	
 			}
 		}
 	}
@@ -47,7 +52,7 @@ int main()
 				
 				for(auto h : chars)
 				{
-					printf("%c%c%c%c\n",i,j,k,h);
+					myfile  << i << j << k << h << "\n";	
 				}
 			}
 		}
